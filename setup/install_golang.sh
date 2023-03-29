@@ -16,10 +16,12 @@ echo "${yellow}[+] Instalando ambiente de desenvolvimento em Go${reset}"
  sleep 1
  GOversion=$(curl -L -s https://golang.org/VERSION?m=text)
  wget https://go.dev/dl/${GOversion}.linux-amd64.tar.gz $DEBUG_STD
- sudo tar -C /usr/local -xzf ${GOversion}.linux-amd64.tar.gz $DEBUG_STD
+ tar -C /usr/local -xzf ${GOversion}.linux-amd64.tar.gz $DEBUG_STD
  rm -rf /usr/local/go && tar -C /usr/local -xzf ${GOversion}.linux-amd64.tar.gz
- echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc && source ~/.bashrc
- echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.zshrc && source ~/.zshrc
+ echo "export PATH=/usr/local/go/bin" >> /etc/profile
+
+echo "${yellow}[*] Break.${reset}"
  rm -rf $GOversion*
+ go version
 
 echo "${yellow}[*] Feito.${reset}"
