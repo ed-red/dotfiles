@@ -19,9 +19,7 @@ echo "${yellow}[+] Instalando ambiente de desenvolvimento em Go${reset}"
  tar -C /usr/local -xzf ${GOversion}.linux-amd64.tar.gz $DEBUG_STD
  rm -rf /usr/local/go && tar -C /usr/local -xzf ${GOversion}.linux-amd64.tar.gz
  echo "export PATH=/usr/local/go/bin" >> /etc/profile
-
-echo "${yellow}[*] Break.${reset}"
+echo "${yellow}[*] VersãoInstalada>>.${reset}"
  rm -rf $GOversion*
  go version
-
 echo "${yellow}[*] Feito.${reset}"
