@@ -8,6 +8,10 @@ reset=`tput sgr0`
 
 #---- script
 
+echo "${yellow}[+] Atualizando Ubuntu ... ${reset}"
+apt update
+apt upgrade -y
+
 echo "${yellow}[+] Instalando base-dev libs ... ${reset}"
 sudo apt install -y build-essential \
 	            git \
