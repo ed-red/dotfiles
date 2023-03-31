@@ -26,3 +26,4 @@ cd dotfiles
 - **setup**: Diretorio com scripts de instalacao 
 
 
+
